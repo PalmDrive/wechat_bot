@@ -45,11 +45,7 @@ bot
     const room = msg.room(),
           content = msg.obj.content;
 
-    // if (
-    //   room && /AiLiBot/i.test(room.topic()) &&
-    //   (/@AiLiBot/.test(content) || /@比男朋友更懂你的我/.test(content) || /@丢丢_de_bot/.test(content))
-    // )
-    if (/@AiLiBot/.test(content) || /@比男朋友更懂你的我/.test(content) || /@丢丢_de_bot/.test(content)) {
+    if (/@AiLiBot/.test(content)) {
       console.info('Bot', 'talk: %s'  , msg);
       talk(msg);
     } else {
